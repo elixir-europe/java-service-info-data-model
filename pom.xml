@@ -60,4 +60,12 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>elixir-europe-github</id>
+            <name>ELIXIR GitHub Apache Maven Repository</name>
+            <url>https://maven.pkg.github.com/elixir-europe</url>
+        </repository>
+    </distributionManagement>
+  
 </project>
