@@ -11,9 +11,9 @@
             <id>github</id>
             <repositories>
                 <repository>
-                    <id>elixir-europe-github</id>
-                    <name>ELIXIR GitHub Apache Maven Repository</name>
-                    <url>https://maven.pkg.github.com/elixir-europe</url>
+                    <id>gitlab-bsc-maven</id>
+                    <name>BSC Apache Maven Repository</name>
+                    <url>https://inb.bsc.es/maven</url>
                 </repository>
             </repositories>
         </profile>
@@ -21,9 +21,9 @@
 
     <servers>
         <server>
-            <id>github</id>
-            <username>${env.GITHUB_USERNAME}</username>
-            <password>${env.GITHUB_TOKEN}</password>
+            <id>gitlab-bsc-maven</id>
+            <username>${env.MAVEN_USERNAME}</username>
+            <password>${env.MAVEN_PASSWORD}</password>
         </server>
     </servers>
 </settings>

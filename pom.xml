@@ -62,9 +62,9 @@
 
     <distributionManagement>
         <repository>
-            <id>elixir-europe-github</id>
-            <name>ELIXIR GitHub Apache Maven Repository</name>
-            <url>https://maven.pkg.github.com/elixir-europe</url>
+            <id>gitlab-bsc-maven</id>
+            <name>BSC Apache Maven Repository</name>
+            <url>https://inb.bsc.es/maven</url>
         </repository>
     </distributionManagement>
   
