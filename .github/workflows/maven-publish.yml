@@ -20,7 +20,9 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        server-id: gitlab-bsc-maven # Value of the distributionManagement/repository/id field of the pom.xml
+        server-username: MAVEN_USERNAME
+        server-password: MAVEN_PASSWORD
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
@@ -29,4 +31,5 @@ jobs:
     - name: Deploy to ELIXIR Github Maven Repository
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+          MAVEN_USERNAME: gitlab-bsc-maven
+          MAVEN_PASSWORD: ${{ secrets.BSC_GITLAB_MAVEN_REPO }}
